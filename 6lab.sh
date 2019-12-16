@@ -1,6 +1,5 @@
 #!/bin/bash
 
-
 rosservice call /reset
 rosparam set /background_r 0
 rosparam set /background_g 255
@@ -78,7 +77,6 @@ function TEST() {
 	rostopic pub -1 /turtle1/cmd_vel geometry_msgs/Twist -- '[0.5, 0.0, 0.0]' '[0.0, 0.0, 0.0]'
 }
 
-
 TWO
 SPACE
 FOUR
@@ -91,5 +89,5 @@ FIVE
 SPACE
 THREE
 SPACE
+rosservice call /turtle1/set_pen 0 0 0 4 1
 rosservice call /turtle1/teleport_absolute 0 0 0
-
